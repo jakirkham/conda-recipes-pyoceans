@@ -7,27 +7,27 @@ source:
   git_tag: master
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
     - python
     - setuptools
-
-  run:
     - iris
     - lxml
-    - numpy
-    - scipy
-    - python
     - pandas
-    - folium
-    - oceans
-    - netcdf4
-    - pyugrid
-    - matplotlib
     - beautifulsoup4
+
+  run:
+    - python
+    - iris
+    - lxml
+    - pandas
+    - beautifulsoup4
+    - folium
     - ipython-notebook
+    - oceans  # [not win32]
+    - pyugrid  # [not win32]
 
 test:
   imports:
@@ -36,4 +36,4 @@ test:
 about:
   home: https://github.com/ocefpaf/utilities.git
   license: MIT License
-  summary: 'SECOORA/IOOS `utilities.py` as a separate module.'
+  summary: 'SECOORA/IOOS `utilities.py` module.'
