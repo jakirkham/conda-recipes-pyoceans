@@ -11,8 +11,7 @@ os:
 
 env:
     global:
-        # This has been generated with "travis encrypt BINSTAR_TOKEN=<token_id> --repo ioos/conda-recipes".
-        secure: "bpWGVoa17XchGHERYo64Unbr8NqHUKbliMM4rmP5UmLwWLHz8eTacj0gVWw+rtQxHBd1fhhedCZgE3KN3iv7l7TmwOSgO/N8SaIBsz3WDeh4Hylf19Yv+3txE6dyNT5F3d0meMsE4G2GrxSdpFza/reJ7E+o5gVaVFXJIWE4ako="
+        secure: "tFEM0o/v7sc6YYUVSCQzpSaBZ6qTwqT6MRh9kiO7gCIVUVV9tovMFZAlIQE3MTO883q0SCIR15S2LUF9OLOlc9R6d2pBoDsTg+w1fFddfakexbuR0vV32sREU4ZQwxjj2LeFDwA98M+HP892AJCLKnLx38jO8dmGNtQhKC2lb3w="
 
     matrix:
         - CONDA_PY=27  CONDA_NPY=18
