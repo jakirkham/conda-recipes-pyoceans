@@ -1,33 +1,23 @@
-# This .travis.yml is a copy of @pelson's .travis.yml from:
-# https://github.com/SciTools/conda-recipes-scitools
-
-# The language in this case has no bearing - we are going to be making use of "conda" for a
-# python distribution for the scientific python stack.
 language: c
 
 os:
- - linux
- - osx
+  - linux
+  - osx
 
 env:
-    global:
-        secure: "tFEM0o/v7sc6YYUVSCQzpSaBZ6qTwqT6MRh9kiO7gCIVUVV9tovMFZAlIQE3MTO883q0SCIR15S2LUF9OLOlc9R6d2pBoDsTg+w1fFddfakexbuR0vV32sREU4ZQwxjj2LeFDwA98M+HP892AJCLKnLx38jO8dmGNtQhKC2lb3w="
-
+  global:
+  - secure: RRgRpMfKIVswcs0rBbW9jjNmk3MEvpxoyiI/9k9u6d2PyiklP7jqcepsfD9pCpgw0PPf5jR1aeT8B01HxTV5Pp7rA7kEAco1XmTsdWugxkKGLolJMw4vzAJBfRJYLzPfFFPvhaHw1EW/AY83c6RqNoDBHPCK+VID3XosXTfzqFM=
     matrix:
-        - CONDA_PY=27  CONDA_NPY=18
+  - CONDA_PY=27  CONDA_NPY=18
 
 install:
-    # Install makeinfo - needed for constructing configuration files via autoreconf (in particular for udunits).
-    - if [[ "$OSTYPE" == "linux-gnu" ]]; then sudo apt-get install texinfo; fi
-
-    - wget https://raw.githubusercontent.com/pelson/Obvious-CI/v0.1.0/bootstrap-obvious-ci-and-miniconda.py
-    - python bootstrap-obvious-ci-and-miniconda.py ~/miniconda x64 2 --without-obvci && source ~/miniconda/bin/activate root
-    # TODO: Change ocefpaf to ioos.
-    - conda config --set show_channel_urls True && conda config --add channels http://conda.binstar.org/ocefpaf/channel/main
-    # NOTE: I am going to keep this for now.  We probably need something from his latest obvious-ci version.
-    - conda install -c http://conda.binstar.org/pelson/channel/development --yes --quiet obvious-ci
-    - conda config --add channels http://conda.binstar.org/ocefpaf
-    - obvci_install_conda_build_tools.py
+  - if [[ "$OSTYPE" == "linux-gnu" ]]; then sudo apt-get install texinfo; fi
+  - wget https://raw.githubusercontent.com/pelson/Obvious-CI/v0.1.0/bootstrap-obvious-ci-and-miniconda.py
+  - python bootstrap-obvious-ci-and-miniconda.py ~/miniconda x64 2 --without-obvci && source ~/miniconda/bin/activate root
+  - conda config --set show_channel_urls True && conda config --add channels http://conda.binstar.org/ocefpaf/channel/main
+  - conda install -c http://conda.binstar.org/pelson/channel/development --yes --quiet obvious-ci
+  - conda config --add channels http://conda.binstar.org/ocefpaf
+  - obvci_install_conda_build_tools.py
 
 script:
-    - obvci_conda_build_dir.py ./ ocefpaf --channel main
+  - obvci_conda_build_dir.py ./ ocefpaf --channel main
