@@ -1,13 +1,13 @@
 package:
   name: utilities
-  version: !!str 0.0.1
+  version: "0.0.1"
 
 source:
   git_url: https://github.com/ocefpaf/utilities.git
   git_tag: master
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
@@ -36,4 +36,4 @@ test:
 about:
   home: https://github.com/ocefpaf/utilities.git
   license: MIT License
-  summary: 'SECOORA/IOOS `utilities.py` module.'
+  summary: "SECOORA/IOOS `utilities.py` module."
