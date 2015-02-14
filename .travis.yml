@@ -22,7 +22,8 @@ install:
     - python bootstrap-obvious-ci-and-miniconda.py ~/miniconda x64 2 --without-obvci && source ~/miniconda/bin/activate root
     - conda config --set show_channel_urls True && conda config --add channels http://conda.binstar.org/ocefpaf/channel/main
     - conda install -c http://conda.binstar.org/ocefpaf/channel/development --yes --quiet obvious-ci
-    - conda config --add channels http://conda.binstar.org/ocefpaf
+    - conda config --add channels http://conda.binstar.org/ocefpaf -f
+    - conda config --add channels http://conda.binstar.org/scitools -f
     - obvci_install_conda_build_tools.py
 
 script:
