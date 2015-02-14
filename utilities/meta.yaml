@@ -1,4 +1,4 @@
-package:
+    package:
   name: utilities
   version: "0.0.1"
 
@@ -26,8 +26,8 @@ requirements:
     - beautifulsoup4
     - folium
     - ipython-notebook
-    - oceans  # [not win32]
-    - pyugrid  # [not win32]
+    - oceans
+    - pyugrid  # [not win]
 
 test:
   imports:
