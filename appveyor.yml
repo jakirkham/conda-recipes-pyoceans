@@ -39,4 +39,4 @@ build: off
 
 
 test_script:
-    - "%CMD_IN_ENV% obvci_conda_build_dir.py .\conda-recipes ocefpaf --channel main"
+    - "%CMD_IN_ENV% obvci_conda_build_dir.py conda-recipes ocefpaf --channel main"
