@@ -1,3 +1,4 @@
+# Using for MacOS builds.
 language: objective-c
 
 env:
