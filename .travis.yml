@@ -1,3 +1,4 @@
+# Using for MacOS builds.
 language: objective-c
 
 env:
@@ -11,12 +12,14 @@ before_install:
     - brew update
 
 install:
+    # Download and run bootstrap.
     - wget https://raw.githubusercontent.com/pelson/Obvious-CI/v0.3.0/bootstrap-obvious-ci-and-miniconda.py
     - python bootstrap-obvious-ci-and-miniconda.py ~/miniconda x64 2 --without-obvci && source ~/miniconda/bin/activate root
-    - conda config --set show_channel_urls True && conda config --add channels http://conda.binstar.org/ocefpaf/channel/main
-    - conda install -c http://conda.binstar.org/ioos/channel/main --yes --quiet obvious-ci
+    # Config conda channels
+    - conda config --set show_channel_urls True
     - conda config --add channels http://conda.binstar.org/ocefpaf
-    - conda info --all
+    # Install Obvious-CI.
+    - conda install -c http://conda.binstar.org/ioos/channel/main --yes --quiet obvious-ci
     - obvci_install_conda_build_tools.py
 
 script:
