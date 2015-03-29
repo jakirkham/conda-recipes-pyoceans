@@ -1,3 +1,0 @@
-[submodule "conda-recipes"]
-	path = conda-recipes
-	url = https://github.com/ioos/conda-recipes.git
