@@ -1,0 +1,30 @@
+package:
+  name: scp
+  version: !!str 0.8.0
+
+source:
+  fn: scp-0.8.0.tar.gz
+  url: https://pypi.python.org/packages/source/s/scp/scp-0.8.0.tar.gz
+  md5: 7240f8717a8ba8abc1b935e16d4bd992
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - paramiko
+
+  run:
+    - python
+    - paramiko
+
+test:
+  imports:
+    - scp
+
+about:
+  home: https://github.com/jbardin/scp.py.git
+  license: LGPL
+  summary: 'scp module for paramiko'

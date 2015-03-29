@@ -1,0 +1,25 @@
+package:
+  name: flopy
+  version: !!str 2.0
+
+source:
+  svn_url: http://flopy.googlecode.com/svn/trunk/
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+    - matplotlib
+  run:
+    - python
+    - numpy
+    - matplotlib
+
+about:
+  home: https://code.google.com/p/flowpy/
+  license: BSD
+  summary: 'scripts to run MODFLOW, MT3D, SWI and SEAWAT'

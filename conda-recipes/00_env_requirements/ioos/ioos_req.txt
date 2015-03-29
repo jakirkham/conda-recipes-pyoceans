@@ -1,0 +1,14 @@
+iris
+mpld3
+pyoos
+pandas
+folium
+rdflib
+geojson
+requests
+ipython-notebook
+xlrd
+mplleaflet
+oceans
+qrcode
+utilities
