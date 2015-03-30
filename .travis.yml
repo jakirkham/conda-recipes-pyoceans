@@ -23,4 +23,4 @@ install:
     - obvci_install_conda_build_tools.py
 
 script:
-    - obvci_conda_build_dir.py conda-recipes/ ocefpaf --channel main
+    - obvci_conda_build_dir.py ./ ocefpaf --channel main

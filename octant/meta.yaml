@@ -1,0 +1,30 @@
+package:
+  name: octant
+  version: !!str 0.8_DEV
+
+source:
+  git_url: https://github.com/hetland/octant.git
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+    - setuptools
+
+  run:
+    - python
+    - numpy
+    - netcdf4
+    - matplotlib
+    - basemap
+test:
+  imports:
+    - octant
+
+about:
+  home: https://github.com/hetland/octant
+  license:  MIT
+  summary: 'Ocean C-grid model setup and analysis tools, for the numerical mariner.'

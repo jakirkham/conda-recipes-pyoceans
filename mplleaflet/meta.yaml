@@ -1,0 +1,32 @@
+package:
+  name: mplleaflet
+
+  version: !!str 0.0.1
+
+source:
+  git_url: https://github.com/jwass/mplleaflet/
+  git_tag: master
+
+build:
+  number: 0
+
+
+requirements:
+  build:
+    - python
+    - setuptools
+
+  run:
+    - python
+    - jinja2
+    - mplexporter
+
+test:
+  # Python imports
+  imports:
+    - mplleaflet
+
+about:
+  home: https://github.com/jwass/mplleaflet
+  license: BSD 3-clause
+  summary: 'Convert Matplotlib plots into Leaflet web maps'

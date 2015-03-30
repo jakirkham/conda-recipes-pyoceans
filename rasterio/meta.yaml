@@ -1,0 +1,43 @@
+package:
+  name: rasterio
+  version: "0.18"
+
+source:
+  fn: rasterio-0.18.tar.gz
+  url: https://pypi.python.org/packages/source/r/rasterio/rasterio-0.18.tar.gz
+  md5: 9e59c3868ac5e064cc564d409022d028
+
+build:
+  number: 0
+
+  entry_points:
+    - rio = rasterio.rio.main:cli
+
+requirements:
+  build:
+    - affine >=1.0
+    - cython >=0.20
+    - click
+    - cligj
+    - enum34
+    - gdal
+    - numpy >=1.8
+    - python
+    - setuptools
+
+  run:
+    - affine >=1.0
+    - click
+    - cligj
+    - enum34
+    - gdal
+    - numpy >=1.8
+    - python
+
+test:
+  imports:
+    - rasterio
+
+about:
+  home: https://github.com/mapbox/rasterio
+  license: BSD

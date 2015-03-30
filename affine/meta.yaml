@@ -1,0 +1,27 @@
+package:
+  name: affine
+  version: !!str 1.0
+
+source:
+  fn: affine-1.0.tar.gz
+  url: https://pypi.python.org/packages/source/a/affine/affine-1.0.tar.gz
+  md5: 6076a7f052e08d191865c00af0fdad30
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - affine
+
+about:
+  home: https://github.com/sgillies/affine
+  license:  BSD License
+  summary: 'Matrices describing affine transformation of the plane'

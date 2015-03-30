@@ -1,0 +1,27 @@
+package:
+  name: appdirs
+  version: !!str 1.2.0
+
+source:
+  fn: appdirs-1.2.0.zip
+  url: https://pypi.python.org/packages/source/a/appdirs/appdirs-1.2.0.zip
+  md5: 7bc76ee16112388a390ca0139e565d9b
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - appdirs
+
+about:
+  home: http://github.com/ActiveState/appdirs
+  license: MIT License
+  summary: 'A small Python module for determining appropriate platform-specific dirs, e.g. a "user data dir"'

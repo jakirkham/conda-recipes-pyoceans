@@ -1,0 +1,28 @@
+package:
+  name: isodate
+  version: !!str 0.4.9
+
+source:
+  fn: isodate-0.4.9.tar.gz
+  url: https://pypi.python.org/packages/source/i/isodate/isodate-0.4.9.tar.gz
+  md5: dd7399f024637f5e59260f59e6af6af4
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+  run:
+    - python
+
+test:
+  imports:
+    - isodate.tests
+    - isodate
+
+about:
+  home: http://cheeseshop.python.org/pypi/isodate
+  license: BSD License
+  summary: 'An ISO 8601 date/time/duration parser and formatter'

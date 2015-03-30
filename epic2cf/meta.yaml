@@ -1,0 +1,30 @@
+package:
+  name: epic2cf
+  version: !!str 0.0.1
+
+source:
+  fn: epic2cf-0.0.1.tar.gz
+  url: https://pypi.python.org/packages/source/e/epic2cf/epic2cf-0.0.1.tar.gz
+  md5: 0b77a721a7dd46d51c70920be77cca29
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - numpy
+
+  run:
+    - python
+    - numpy
+
+test:
+  imports:
+    - epic2cf
+
+about:
+  home: https://github.com/axiom-data-science/epic2cf
+  license: MIT License
+  summary: 'A simple python library to find the CF standard name equivalent of an EPIC code.'

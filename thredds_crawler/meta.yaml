@@ -1,0 +1,31 @@
+package:
+  name: thredds_crawler
+  version: !!str 0.7_DEV
+
+source:
+  git_url: https://github.com/asascience-open/thredds_crawler.git
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - requests
+    - lxml
+
+  run:
+    - python
+    - requests
+    - lxml
+
+test:
+  imports:
+    - tests
+    - thredds_crawler
+
+about:
+  home: https://github.com/asascience-open/thredds_crawler
+  license:  GNU General Public License v3 (GPLv3)
+  summary: 'A Python library for crawling THREDDS servers'

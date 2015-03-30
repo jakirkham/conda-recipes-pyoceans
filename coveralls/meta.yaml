@@ -1,0 +1,40 @@
+package:
+  name: coveralls
+  version: !!str 0.5
+
+source:
+  fn: coveralls-0.5.zip
+  url: https://pypi.python.org/packages/source/c/coveralls/coveralls-0.5.zip
+  md5: 9830c7ec568b2ffde62e9dabbcecfbba
+
+build:
+  entry_points:
+    - coveralls = coveralls.cli:main
+  number: 0
+
+requirements:
+  build:
+    - python
+    - setuptools
+    - pyyaml >=3.10
+    - docopt >=0.6.1
+    - coverage >=3.6,<3.999
+    - requests >=1.0.0
+  run:
+    - python
+    - pyyaml >=3.10
+    - docopt >=0.6.1
+    - coverage >=3.6,<3.999
+    - requests >=1.0.0
+
+test:
+  imports:
+    - coveralls
+
+  commands:
+    - coveralls --help
+
+about:
+  home: http://github.com/coagulant/coveralls-python
+  license: MIT License
+  summary: 'Show coverage stats online via coveralls.io'
